@@ -436,12 +436,11 @@ const App = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member, idx) => (
               <RevealOnScroll key={idx} className="group perspective-1000">
-                {/* Contenedor Giratorio */}
                 <div className="relative h-[400px] w-full transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
 
-                  {/* --- CARA FRONTAL (Imagen) --- */}
-                  {/* 'backface-hidden' es CRUCIAL para que esta cara deje de recibir clicks cuando gira */}
-                  <div className="absolute inset-0 w-full h-full backface-hidden">
+                  {/* --- CARA FRONTAL --- */}
+                  {/* INICIO: z-20 (arriba). HOVER: z-0 (al fondo) y pointer-events-none (no bloquea clicks) */}
+                  <div className="absolute inset-0 w-full h-full backface-hidden z-20 group-hover:z-0 group-hover:pointer-events-none">
                     <div className={`w-full h-full overflow-hidden rounded-2xl relative border transition-colors ${darkMode ? 'border-white/10' : 'border-gray-200'}`}>
                       <div className={`absolute inset-0 bg-gradient-to-t ${darkMode ? 'from-black' : 'from-[#3d1efe]/80'} via-transparent to-transparent z-10 opacity-60`}></div>
                       <img
@@ -457,20 +456,19 @@ const App = () => {
                     </div>
                   </div>
 
-                  {/* --- CARA TRASERA (Info + Botón) --- */}
-                  {/* Debe tener 'rotate-y-180' para estar volteada inicialmente y 'backface-hidden' */}
-                  <div className="absolute inset-0 bg-[#3d1efe] rounded-2xl p-6 flex flex-col justify-center items-center text-center backdrop-blur-sm shadow-xl rotate-y-180 backface-hidden">
+                  {/* --- CARA TRASERA --- */}
+                  {/* INICIO: z-10 (abajo). HOVER: z-50 (al frente) para asegurar el click */}
+                  <div className="absolute inset-0 bg-[#3d1efe] rounded-2xl p-6 flex flex-col justify-center items-center text-center backdrop-blur-sm shadow-xl rotate-y-180 backface-hidden z-10 group-hover:z-50">
                     <p className="font-heading italic text-lg text-white mb-4">"{member.quote}"</p>
                     <div className="relative z-10">
                       <p className="font-tech text-xs uppercase tracking-widest font-bold text-[#3d1efe] bg-white px-3 py-1 mb-6 rounded-full inline-block">{member.role}</p>
                     </div>
 
-                    {/* Botón LinkedIn */}
+                    {/* El botón de LinkedIn ahora estará en la capa superior (z-50) gracias al padre */}
                     <a
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      // 'pointer-events-auto' asegura la interactividad
                       className="relative z-50 w-12 h-12 rounded-full bg-white text-[#3d1efe] flex items-center justify-center hover:scale-110 transition-transform shadow-lg cursor-pointer"
                       onClick={(e) => e.stopPropagation()}
                     >
