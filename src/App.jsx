@@ -18,6 +18,7 @@ import {
   Sun,
   Moon
 } from 'lucide-react';
+import logoImage from './assets/logo.png';
 
 // Hook para animaciones al hacer scroll (Parallax simple)
 const useParallax = (speed = 0.5) => {
@@ -90,7 +91,7 @@ const App = () => {
       name: "Franca Alatrista Valdivia",
       role: "Content Manager & Creator",
       image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Franca%20Alatrista%20Valdivia.png?raw=true",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/franca-alatrista-466307249/",
       quote: "Contenido con alma en la era digital."
     },
     {
@@ -188,18 +189,12 @@ const App = () => {
           <div className="flex justify-between h-20 items-center">
             {/* Logo */}
             <div className="flex items-center gap-3 cursor-pointer group" onClick={() => window.scrollTo(0, 0)}>
-              <div className="relative">
-                <div className={`absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-400 blur-lg opacity-50 group-hover:opacity-100 transition-opacity ${darkMode ? '' : 'hidden'}`}></div>
-                <div
-                  className="relative w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold font-heading text-xl shadow-lg"
-                  style={{ background: primaryColor }}
-                >
-                  ID
-                </div>
-              </div>
-              <span className={`font-heading font-bold text-2xl tracking-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                Improve <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3d1efe] to-[#00c6ff]">Digitals</span>
-              </span>
+              {/* Reemplazamos todo el bloque complejo anterior por la imagen */}
+              <img
+                src={logoImage}
+                alt="Improve Digitals Logo"
+                className="h-12 w-auto object-contain transition-transform hover:scale-105"
+              />
             </div>
 
             {/* Desktop Menu */}
@@ -208,8 +203,8 @@ const App = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  // CAMBIO AQUÍ: Se agregó 'bg-transparent' al inicio de la cadena de clases
-                  className={`bg-transparent nav-link text-sm uppercase tracking-widest transition-colors ${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-[#3d1efe]'}`}
+                  // Se añade hover:bg-gray-100 para un efecto suave en modo claro
+                  className={`nav-link text-sm uppercase tracking-widest transition-colors px-3 py-2 rounded-lg bg-transparent ${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-[#3d1efe] hover:bg-gray-50'}`}
                 >
                   {item}
                 </button>
@@ -440,40 +435,49 @@ const App = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member, idx) => (
-              <RevealOnScroll key={idx} className="group perspective">
-                <div className="relative h-[400px] w-full transition-all duration-500 transform-style-3d group-hover:rotate-y-180">
-                  {/* Front Card - Image */}
-                  <div className="absolute inset-0 w-full h-full">
-                    <div className={`w-full h-full overflow-hidden rounded-2xl relative border transition-colors ${darkMode ? 'border-white/10 group-hover:border-[#3d1efe]' : 'border-gray-200 group-hover:border-[#3d1efe]'}`}>
+              <RevealOnScroll key={idx} className="group perspective-1000">
+                {/* Contenedor Giratorio */}
+                <div className="relative h-[400px] w-full transition-all duration-700 transform-style-3d group-hover:rotate-y-180">
+
+                  {/* --- CARA FRONTAL (Imagen) --- */}
+                  {/* 'backface-hidden' es CRUCIAL para que esta cara deje de recibir clicks cuando gira */}
+                  <div className="absolute inset-0 w-full h-full backface-hidden">
+                    <div className={`w-full h-full overflow-hidden rounded-2xl relative border transition-colors ${darkMode ? 'border-white/10' : 'border-gray-200'}`}>
                       <div className={`absolute inset-0 bg-gradient-to-t ${darkMode ? 'from-black' : 'from-[#3d1efe]/80'} via-transparent to-transparent z-10 opacity-60`}></div>
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = "https://ui-avatars.com/api/?name=" + member.name.replace(" ", "+") + "&background=random";
-                        }}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                       />
                       <div className="absolute bottom-4 left-4 z-20">
-                        <h3 className="text-white font-heading text-xl leading-tight font-bold">{member.name.split(" ")[0]} <br /> {member.name.split(" ")[1]}</h3>
+                        <h3 className="text-white font-heading text-xl leading-tight font-bold">
+                          {member.name.split(" ")[0]} <br /> {member.name.split(" ")[1]}
+                        </h3>
                       </div>
                     </div>
                   </div>
 
-                  {/* Hover Overlay / Interaction */}
-                  <div className="absolute inset-0 bg-[#3d1efe] rounded-2xl p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm shadow-xl rotate-y-180">
+                  {/* --- CARA TRASERA (Info + Botón) --- */}
+                  {/* Debe tener 'rotate-y-180' para estar volteada inicialmente y 'backface-hidden' */}
+                  <div className="absolute inset-0 bg-[#3d1efe] rounded-2xl p-6 flex flex-col justify-center items-center text-center backdrop-blur-sm shadow-xl rotate-y-180 backface-hidden">
                     <p className="font-heading italic text-lg text-white mb-4">"{member.quote}"</p>
-                    <p className="font-tech text-xs uppercase tracking-widest font-bold text-[#3d1efe] bg-white px-3 py-1 mb-6 rounded-full">{member.role}</p>
+                    <div className="relative z-10">
+                      <p className="font-tech text-xs uppercase tracking-widest font-bold text-[#3d1efe] bg-white px-3 py-1 mb-6 rounded-full inline-block">{member.role}</p>
+                    </div>
+
+                    {/* Botón LinkedIn */}
                     <a
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-white text-[#3d1efe] flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+                      // 'pointer-events-auto' asegura la interactividad
+                      className="relative z-50 w-12 h-12 rounded-full bg-white text-[#3d1efe] flex items-center justify-center hover:scale-110 transition-transform shadow-lg cursor-pointer"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <Linkedin size={24} />
                     </a>
                   </div>
+
                 </div>
               </RevealOnScroll>
             ))}
