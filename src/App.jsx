@@ -423,7 +423,7 @@ const App = () => {
                 className="group relative px-8 py-5 rounded-lg bg-[#3d1efe] text-white font-bold font-heading text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-2xl shadow-blue-500/20"
               >
                 <span className="relative flex items-center">
-                  Explorar Soluciones <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  Explorar Soluciones
                 </span>
               </button>
 
