@@ -510,12 +510,12 @@ const App = () => {
                 </div>
                 <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Content AI</h3>
                 <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Generación de contenido que no parece generado por un robot. Usamos LLMs y modelos de difusión para crear narrativas visuales y textuales que <span className={darkMode ? 'text-white font-bold' : 'text-[#3d1efe] font-bold'}>venden</span>.
+                  Generación de contenido con inteligencia artificial. Utilizamos los últimos modelos de imágenes y videos para que tu organización venda más siguiendo las tendencias.
                 </p>
                 <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3" /> Guiones & Copywriting Viral</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3" /> Avatares & Video Sintético</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3" /> Arte Generativo High-End</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3" /> Copywriting Viral</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3" /> Avatares & Influencers</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3" /> ⁠Arte Generativo</li>
                 </ul>
               </div>
             </RevealOnScroll>
