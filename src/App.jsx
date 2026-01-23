@@ -529,12 +529,12 @@ const App = () => {
                 </div>
                 <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Automatización & Apps</h3>
                 <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Recupera tu activo más valioso: el tiempo. Desarrollamos automatizaciones que eliminan lo repetitivo y apps que resuelven problemas cotidianos.
+                  Optimiza tu tiempo. Desarrollamos automatizaciones y programas que agilizan procesos y resuelven problemas cotidianos. 
                 </p>
                 <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3" /> Chatbots de Atención 24/7</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3" /> Chatbots de Atención</li>
                   <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3" /> Workflows Automatizados</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3" /> Desarrollo de SaaS a medida</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3" /> ⁠Apps Personalizadas</li>
                 </ul>
               </div>
             </RevealOnScroll>
