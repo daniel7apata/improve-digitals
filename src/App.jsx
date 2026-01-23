@@ -195,14 +195,15 @@ const App = () => {
     {
       name: "Sebastian Fernandez Moris",
       role: "Project Manager & Innovation Lead",
-      image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Sebastian%20Fernandez%20Moris.jpeg?raw=true",
+      image: "https://github.com/daniel7apata/improve-digitals/blob/main/src/assets/Sebastian%20Fernandez%20Moris.png?raw=true",
       linkedin: "https://www.linkedin.com/in/sebastian-fernandez-moris-469a43292/",
       quote: "Innovación es rebeldía estratégica.",
+      imageAlign: "object-top"
     },
     {
       name: "Gustavo Huamaní Pimentel",
       role: "Advertising Manager & Graphic Lead",
-      image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Gustavo%20Huamani.png?raw=true",
+      image: "https://github.com/daniel7apata/improve-digitals/blob/main/src/assets/Gustavo%20Huamani.png?raw=true",
       linkedin: "https://www.linkedin.com/in/gustavo-enmanuel-huamani-pimentel-086261254/",
       quote: "El diseño no decora, comunica",
       imageAlign: "object-top"
@@ -210,7 +211,7 @@ const App = () => {
     {
       name: "Franca Alatrista Valdivia",
       role: "Content Manager & Creator",
-      image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Franca%20Alatrista%20Valdivia.png?raw=true",
+      image: "https://github.com/daniel7apata/improve-digitals/blob/main/src/assets/Franca%20Alatrista%20Valdivia.png?raw=true",
       linkedin: "https://www.linkedin.com/in/franca-alatrista-466307249/",
       quote: "Contenido que eleva tus vibras",
       imageAlign: "object-top"
@@ -218,7 +219,7 @@ const App = () => {
     {
       name: "Daniel Zapata Trelles",
       role: "Product Developer & DevOps",
-      image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Daniel%20Zapata.png?raw=true",
+      image: "https://github.com/daniel7apata/improve-digitals/blob/main/src/assets/Daniel%20Zapata.png?raw=true",
       linkedin: "https://www.linkedin.com/in/daniel-alonso-zapata-trelles-1664aa1b9/",
       quote: "Código limpio, futuro escalable.",
       imageAlign: "object-top"
