@@ -471,7 +471,7 @@ const App = () => {
               <div className="relative grid grid-cols-2 gap-4">
                 {[
                   { icon: ShieldCheck, title: "Seriedad", desc: "Ética y profesionalismo como pilares" },
-                  { icon: Rocket, title: "Velocidad", desc: "Automatización que escala." },
+                  { icon: Rocket, title: "Velocidad", desc: "Automatización que escala y aumenta tus ventas" },
                   { icon: Lightbulb, title: "Innovación", desc: "Tecnología que resuelve" },
                   { icon: Scale, title: "Claridad", desc: "Aprende en simples pasos" }
                 ].map((item, idx) => (
