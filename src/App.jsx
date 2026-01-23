@@ -204,14 +204,14 @@ const App = () => {
       role: "Advertising Manager & Graphic Lead",
       image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Gustavo%20Huamani.png?raw=true",
       linkedin: "https://www.linkedin.com/in/gustavo-enmanuel-huamani-pimentel-086261254/",
-      quote: "El diseño no decora, comunica verdad."
+      quote: "El diseño no decora, comunica"
     },
     {
       name: "Franca Alatrista Valdivia",
       role: "Content Manager & Creator",
       image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Franca%20Alatrista%20Valdivia.png?raw=true",
       linkedin: "https://www.linkedin.com/in/franca-alatrista-466307249/",
-      quote: "Contenido con alma en la era digital."
+      quote: "Contenido que eleva tus vibras"
     },
     {
       name: "Daniel Zapata Trelles",
@@ -470,10 +470,10 @@ const App = () => {
               <div className={`absolute inset-0 bg-gradient-to-r from-[#3d1efe] to-blue-400 blur-2xl opacity-10 animate-[pulse_4s_infinite]`}></div>
               <div className="relative grid grid-cols-2 gap-4">
                 {[
-                  { icon: ShieldCheck, title: "Legitimidad", desc: "Sin riesgos legales ni éticos." },
+                  { icon: ShieldCheck, title: "Responsabilidad", desc: "Ética y profesionalismo como pilares" },
                   { icon: Rocket, title: "Velocidad", desc: "Automatización que escala." },
-                  { icon: Lightbulb, title: "Claridad", desc: "Adiós a la jerga técnica." },
-                  { icon: Scale, title: "Ética", desc: "Tecnología con consciencia." }
+                  { icon: Lightbulb, title: "Innovación", desc: "Tecnología que resuelve" },
+                  { icon: Scale, title: "Claridad", desc: "Aprende en simples pasos" }
                 ].map((item, idx) => (
                   <RevealOnScroll key={idx} className={`glass-panel p-6 transition-colors group rounded-xl ${darkMode ? 'hover:bg-white/5' : 'hover:bg-white hover:shadow-lg'}`}>
                     <item.icon size={40} className={`mb-4 transition-colors ${darkMode ? 'text-gray-400 group-hover:text-white' : 'text-gray-400 group-hover:text-[#3d1efe]'}`} />
@@ -495,7 +495,7 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <RevealOnScroll>
             <h2 className={`font-heading text-4xl md:text-6xl text-center mb-20 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-              Descubre <span className="text-[#3d1efe] italic">formas de</span> innovar
+              Descubre formas<span className="text-[#3d1efe] italic"> de innovar</span>
             </h2>
           </RevealOnScroll>
 
@@ -604,10 +604,10 @@ const App = () => {
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <RevealOnScroll>
             <h2 className={`font-heading text-6xl md:text-8xl font-black mb-8 tracking-tighter ${darkMode ? 'text-white mix-blend-overlay' : 'text-[#3d1efe]'}`}>
-              LET'S TALK
+              HABLEMOS 
             </h2>
             <p className={`font-tech text-xl mb-12 max-w-2xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              ¿Listo para dejar de adivinar y empezar a ejecutar? La primera consulta va por nuestra cuenta.
+              Mejora tus procesos, escala tus productos, aumenta tus ventas. Con nosotros, mejora.
             </p>
 
             <form className="max-w-lg mx-auto space-y-4" onSubmit={(e) => e.preventDefault()}>
@@ -622,7 +622,7 @@ const App = () => {
                 </div>
               </div>
               <button className={`w-full font-bold font-heading text-xl py-6 transition-colors mt-8 uppercase tracking-widest ${darkMode ? 'bg-white text-black hover:bg-[#3d1efe] hover:text-white' : 'bg-[#3d1efe] text-white hover:bg-[#2a15b0]'}`}>
-                Solicitar Auditoría
+                Contáctanos
               </button>
             </form>
           </RevealOnScroll>
