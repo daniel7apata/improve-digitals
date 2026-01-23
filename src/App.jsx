@@ -94,7 +94,7 @@ const TeamCard = ({ member }) => {
               src={member.image}
               alt={member.name}
               loading="lazy" // Optimización para móviles
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              className={`w-full h-full object-cover ${member.imageAlign || 'object-center'} grayscale group-hover:grayscale-0 transition-all duration-500`}
             />
             <div className="absolute bottom-4 left-4 z-20">
               <h3 className="text-white font-heading text-xl leading-tight font-bold">
@@ -197,28 +197,31 @@ const App = () => {
       role: "Project Manager & Innovation Lead",
       image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Sebastian%20Fernandez%20Moris.jpeg?raw=true",
       linkedin: "https://www.linkedin.com/in/sebastian-fernandez-moris-469a43292/",
-      quote: "Innovación es rebeldía estratégica."
+      quote: "Innovación es rebeldía estratégica.",
     },
     {
       name: "Gustavo Huamaní Pimentel",
       role: "Advertising Manager & Graphic Lead",
       image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Gustavo%20Huamani.png?raw=true",
       linkedin: "https://www.linkedin.com/in/gustavo-enmanuel-huamani-pimentel-086261254/",
-      quote: "El diseño no decora, comunica"
+      quote: "El diseño no decora, comunica",
+      imageAlign: "object-top"
     },
     {
       name: "Franca Alatrista Valdivia",
       role: "Content Manager & Creator",
       image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Franca%20Alatrista%20Valdivia.png?raw=true",
       linkedin: "https://www.linkedin.com/in/franca-alatrista-466307249/",
-      quote: "Contenido que eleva tus vibras"
+      quote: "Contenido que eleva tus vibras",
+      imageAlign: "object-top"
     },
     {
       name: "Daniel Zapata Trelles",
       role: "Product Developer & DevOps",
       image: "https://github.com/Lab-EC-UPC/assets/blob/main/especial-licencias/Daniel%20Zapata.png?raw=true",
       linkedin: "https://www.linkedin.com/in/daniel-alonso-zapata-trelles-1664aa1b9/",
-      quote: "Código limpio, futuro escalable."
+      quote: "Código limpio, futuro escalable.",
+      imageAlign: "object-top"
     }
   ];
 
