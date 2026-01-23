@@ -496,7 +496,7 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <RevealOnScroll>
             <h2 className={`font-heading text-4xl md:text-6xl text-center mb-20 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-              Dos Caminos. <span className="text-[#3d1efe] italic">Un Objetivo.</span>
+              Descubre <span className="text-[#3d1efe] italic">formas de</span> innovar
             </h2>
           </RevealOnScroll>
 
