@@ -18,7 +18,6 @@ import {
   Sun,
   Moon
 } from 'lucide-react';
-import logoImage from './assets/logo.png';
 
 
 // Pon esto FUERA del componente App (antes de 'const App = ...') para mejor rendimiento
