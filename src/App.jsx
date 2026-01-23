@@ -439,7 +439,7 @@ const App = () => {
 
         {/* Scroll Indicator */}
         <div className={`absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50 ${darkMode ? 'text-white' : 'text-gray-400'}`}>
-          <MousePointer2 size={32} />
+        
         </div>
       </section>
 
