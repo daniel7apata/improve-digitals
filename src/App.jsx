@@ -329,7 +329,7 @@ const App = () => {
               {['Soluciones', 'Filosofía', 'Equipo'].map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
+                  onClick={() => scrollToSection(item.toLowerCase().replace('í', 'i'))}
                   // Se añade hover:bg-gray-100 para un efecto suave en modo claro
                   className={`nav-link text-sm uppercase tracking-widest transition-colors px-3 py-2 rounded-lg bg-transparent ${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-[#3d1efe] hover:bg-gray-50'}`}
                 >
@@ -470,7 +470,7 @@ const App = () => {
               <div className={`absolute inset-0 bg-gradient-to-r from-[#3d1efe] to-blue-400 blur-2xl opacity-10 animate-[pulse_4s_infinite]`}></div>
               <div className="relative grid grid-cols-2 gap-4">
                 {[
-                  { icon: ShieldCheck, title: "Responsabilidad", desc: "Ética y profesionalismo como pilares" },
+                  { icon: ShieldCheck, title: "Seriedad", desc: "Ética y profesionalismo como pilares" },
                   { icon: Rocket, title: "Velocidad", desc: "Automatización que escala." },
                   { icon: Lightbulb, title: "Innovación", desc: "Tecnología que resuelve" },
                   { icon: Scale, title: "Claridad", desc: "Aprende en simples pasos" }
