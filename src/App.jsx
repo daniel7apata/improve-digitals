@@ -211,7 +211,7 @@ const App = () => {
     {
       name: "Franca Alatrista Valdivia",
       role: "Content Manager & Creator",
-      image: "https://github.com/daniel7apata/improve-digitals/blob/main/src/assets/Franca%20Alatrista%20Valdivia.png?raw=true",
+      image: "https://github.com/daniel7apata/improve-digitals/blob/main/src/assets/Franca%20Alatrista.jpg?raw=true",
       linkedin: "https://www.linkedin.com/in/franca-alatrista-466307249/",
       quote: "Contenido que eleva tus vibras",
       imageAlign: "object-top"
