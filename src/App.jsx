@@ -5,7 +5,7 @@ import {
   Bot,
   Sparkles,
   Rocket,
-  Zap, // Asegúrate de que este esté
+  Zap,
   ArrowRight,
   Brain,
   CheckCircle2,
@@ -17,9 +17,12 @@ import {
   MousePointer2,
   Sun,
   Moon,
-  Briefcase,  // NUEVO
-  TrendingUp, // NUEVO
-  Eye         // NUEVO
+  Briefcase,  // Nuevo para Seriedad
+  TrendingUp, // Nuevo para Rentabilidad
+  Eye,        // Nuevo para Claridad
+  Instagram,  // Nuevo para Redes
+  Layout,     // Nuevo para Dashboard
+  Lock        // Nuevo para Seguridad
 } from 'lucide-react';
 
 
@@ -187,6 +190,7 @@ const RevealOnScroll = ({ children, className = "" }) => {
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false); // Default to Light Mode
+  const [showSocials, setShowSocials] = useState(false);
   const scrollY = useParallax(0.1);
 
   const primaryColor = "#3d1efe";
@@ -419,7 +423,7 @@ const App = () => {
             </h1>
 
             <p className={`font-heading text-lg md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed font-light ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Rediseñamos tu arquitectura digital para optimizar los procesos de tu empresa con herramientas de IA, al mismo tiempo que te ayudamos a tener una mayor presencia en redes sociales y agilizar la creación de tu contenido. 
+              Rediseñamos tu arquitectura digital para optimizar los procesos de tu empresa con herramientas de IA, al mismo tiempo que te ayudamos a tener una mayor presencia en redes sociales y agilizar la creación de tu contenido.
               <span className={`block mt-4 font-medium italic text-3xl ${darkMode ? 'text-white' : 'text-[#3d1efe]'}`}>"IA aplicada. Resultados reales"</span>
             </p>
 
@@ -445,7 +449,7 @@ const App = () => {
 
         {/* Scroll Indicator */}
         <div className={`absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50 ${darkMode ? 'text-white' : 'text-gray-400'}`}>
-        
+
         </div>
       </section>
 
@@ -476,7 +480,6 @@ const App = () => {
               <div className={`absolute inset-0 bg-gradient-to-r from-[#3d1efe] to-blue-400 blur-2xl opacity-10 animate-[pulse_4s_infinite]`}></div>
               <div className="relative grid grid-cols-2 gap-4">
                 {[
-                  // CAMBIOS DE ICONOS AQUÍ
                   { icon: Briefcase, title: "Seriedad", desc: "Ética y profesionalismo como pilares" },
                   { icon: TrendingUp, title: "Rentabilidad", desc: "Soluciones inteligentes a bajo precio" },
                   { icon: Zap, title: "Innovación", desc: "Exploramos lo nuevo, implementamos lo que funciona" },
@@ -496,9 +499,10 @@ const App = () => {
 
       // ... (resto de importaciones)
 
-// Busca la sección con id="soluciones" y reemplaza su contenido interior con esto:
+      // Busca la sección con id="soluciones" y reemplaza su contenido interior con esto:
 
       {/* VERTICALS - "Alarako" but Blue */}
+      {/* SECCIÓN SOLUCIONES ACTUALIZADA */}
       <section id="soluciones" className="py-32 relative overflow-hidden">
         {/* Background Abstract */}
         <div className={`absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-[#3d1efe]/5 to-transparent rounded-full blur-3xl pointer-events-none`}></div>
@@ -510,85 +514,85 @@ const App = () => {
             </h2>
           </RevealOnScroll>
 
-          {/* Grid cambiado para soportar 4 tarjetas (2x2 en desktop) */}
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
-            
-            {/* Dashboard #1: Arquitectura Digital Inteligente */}
+          {/* Grid de 4 Elementos (2 columnas en tablet/desktop) */}
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+
+            {/* Dashboard #1: Arquitectura Digital Inteligente (AZUL) */}
             <RevealOnScroll className="group relative">
-              <div className={`absolute inset-0 bg-gradient-to-br from-[#3d1efe] to-[#050510] transform skew-y-2 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
-              <div className={`relative border p-10 rounded-3xl h-full hover:-translate-y-4 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10 shadow-black/50' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
-                <div className="w-20 h-20 bg-[#3d1efe] rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-500/30 transform rotate-3 group-hover:rotate-0 transition-transform">
-                  <Cpu size={40} className="text-white" />
+              <div className={`absolute inset-0 bg-gradient-to-br from-[#3d1efe] to-[#050510] transform skew-y-1 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
+              <div className={`relative border p-8 rounded-3xl h-full hover:-translate-y-2 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
+                <div className="w-16 h-16 bg-[#3d1efe] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
+                  <Cpu size={32} className="text-white" />
                 </div>
-                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Arquitectura Digital Inteligente</h3>
-                <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                <h3 className={`font-heading text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Arquitectura Digital Inteligente</h3>
+                <p className={`font-tech text-sm mb-6 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   Diseñamos la estructura que integra procesos, herramientas y datos en un sistema coherente y escalable.
                 </p>
-                <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Diseño de flujos inteligentes</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Integración de herramientas IA</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Integración multimodal</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Desarrollo web y ecosistemas</li>
+                <ul className={`space-y-3 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Diseño de flujos inteligentes</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Integración de herramientas IA</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Integración multimodal</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Desarrollo web y ecosistemas</li>
                 </ul>
               </div>
             </RevealOnScroll>
 
-            {/* Dashboard #2: Crecimiento digital */}
-            <RevealOnScroll className="group relative mt-12 md:mt-0">
-              <div className={`absolute inset-0 bg-gradient-to-br from-[#00c6ff] to-[#050510] transform -skew-y-2 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
-              <div className={`relative border p-10 rounded-3xl h-full hover:-translate-y-4 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10 shadow-black/50' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
-                <div className="w-20 h-20 bg-[#00c6ff] rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-500/30 transform -rotate-3 group-hover:rotate-0 transition-transform">
-                  <Rocket size={40} className="text-white" />
+            {/* Dashboard #2: Crecimiento Digital (CIAN) */}
+            <RevealOnScroll className="group relative mt-8 md:mt-0">
+              <div className={`absolute inset-0 bg-gradient-to-br from-[#00c6ff] to-[#050510] transform -skew-y-1 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
+              <div className={`relative border p-8 rounded-3xl h-full hover:-translate-y-2 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
+                <div className="w-16 h-16 bg-[#00c6ff] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/30">
+                  <Rocket size={32} className="text-white" />
                 </div>
-                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Crecimiento Digital</h3>
-                <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                <h3 className={`font-heading text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Crecimiento Digital</h3>
+                <p className={`font-tech text-sm mb-6 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   Construimos mecanismos digitales que impulsan el posicionamiento de tu marca.
                 </p>
-                <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Estrategia y contenido con IA</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Producción audiovisual con IA</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Avatares e influencers virtuales</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> CRM, SEO y analítica</li>
+                <ul className={`space-y-3 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#00c6ff] mr-2 mt-1 min-w-[16px]" /> Estrategia y contenido con IA</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#00c6ff] mr-2 mt-1 min-w-[16px]" /> Producción audiovisual con IA</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#00c6ff] mr-2 mt-1 min-w-[16px]" /> Avatares e influencers virtuales</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#00c6ff] mr-2 mt-1 min-w-[16px]" /> Integración CRM y analítica</li>
                 </ul>
               </div>
             </RevealOnScroll>
 
-            {/* Dashboard #3: Inteligencia Operativa */}
+            {/* Dashboard #3: Inteligencia Operativa (AZUL) */}
             <RevealOnScroll className="group relative">
-              <div className={`absolute inset-0 bg-gradient-to-br from-[#3d1efe] to-[#050510] transform skew-y-2 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
-              <div className={`relative border p-10 rounded-3xl h-full hover:-translate-y-4 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10 shadow-black/50' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
-                <div className="w-20 h-20 bg-[#3d1efe] rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-500/30 transform rotate-3 group-hover:rotate-0 transition-transform">
-                  <Brain size={40} className="text-white" />
+              <div className={`absolute inset-0 bg-gradient-to-br from-[#3d1efe] to-[#050510] transform skew-y-1 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
+              <div className={`relative border p-8 rounded-3xl h-full hover:-translate-y-2 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
+                <div className="w-16 h-16 bg-[#3d1efe] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
+                  <Brain size={32} className="text-white" />
                 </div>
-                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Inteligencia Operativa</h3>
-                <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                <h3 className={`font-heading text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Inteligencia Operativa</h3>
+                <p className={`font-tech text-sm mb-6 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   Convertimos datos y procesos en decisiones estratégicas disruptivas.
                 </p>
-                <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Sistemas analíticos por sector</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Modelos predictivos y algoritmos</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Medición de eficiencia operativa</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Diseño y monitoreo de KPIs</li>
+                <ul className={`space-y-3 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Sistemas analíticos por sector</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Modelos predictivos y algoritmos</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Medición de eficiencia operativa</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Diseño y monitoreo de KPIs</li>
                 </ul>
               </div>
             </RevealOnScroll>
 
-            {/* Dashboard #4: Seguridad Digital */}
-            <RevealOnScroll className="group relative mt-12 md:mt-0">
-              <div className={`absolute inset-0 bg-gradient-to-br from-[#00c6ff] to-[#050510] transform -skew-y-2 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
-              <div className={`relative border p-10 rounded-3xl h-full hover:-translate-y-4 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10 shadow-black/50' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
-                <div className="w-20 h-20 bg-[#00c6ff] rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-500/30 transform -rotate-3 group-hover:rotate-0 transition-transform">
-                  <ShieldCheck size={40} className="text-white" />
+            {/* Dashboard #4: Seguridad Digital (CIAN) */}
+            <RevealOnScroll className="group relative mt-8 md:mt-0">
+              <div className={`absolute inset-0 bg-gradient-to-br from-[#00c6ff] to-[#050510] transform -skew-y-1 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
+              <div className={`relative border p-8 rounded-3xl h-full hover:-translate-y-2 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
+                <div className="w-16 h-16 bg-[#00c6ff] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/30">
+                  <ShieldCheck size={32} className="text-white" />
                 </div>
-                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Seguridad Digital</h3>
-                <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                <h3 className={`font-heading text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Seguridad Digital</h3>
+                <p className={`font-tech text-sm mb-6 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   Diseñamos entornos digitales seguros, resilientes y alineados a estándares de protección.
                 </p>
-                <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Evaluación de riesgos digitales</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Protección de datos estratégicos</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Sistemas de respaldo</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Seguridad en automatizaciones IA</li>
+                <ul className={`space-y-3 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#00c6ff] mr-2 mt-1 min-w-[16px]" /> Evaluación de riesgos digitales</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#00c6ff] mr-2 mt-1 min-w-[16px]" /> Protección de datos estratégicos</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#00c6ff] mr-2 mt-1 min-w-[16px]" /> Sistemas de respaldo</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#00c6ff] mr-2 mt-1 min-w-[16px]" /> Seguridad en automatizaciones IA</li>
                 </ul>
               </div>
             </RevealOnScroll>
@@ -652,6 +656,7 @@ const App = () => {
       </section>
 
       {/* CTA FOOTER - Big & Bold */}
+      {/* SECCIÓN CONTACTO CORREGIDA */}
       <section id="contacto" className="py-32 relative overflow-hidden">
         {/* Animated Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#3d1efe] via-[#2a15b0] to-[#3d1efe] opacity-10 bg-[length:200%_200%] animate-[spin-slow_10s_linear_infinite]"></div>
@@ -660,30 +665,118 @@ const App = () => {
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <RevealOnScroll>
             <h2 className={`font-heading text-6xl md:text-8xl font-black mb-8 tracking-tighter ${darkMode ? 'text-white mix-blend-overlay' : 'text-[#3d1efe]'}`}>
-              HABLEMOS 
+              HABLEMOS
             </h2>
             <p className={`font-tech text-xl mb-12 max-w-2xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              Integra procesos, automatización, crecimiento y seguridad en un solo sistema estratégico.
+              Mejora tus procesos, escala tus productos, aumenta tus ventas. Con nosotros, mejora.
             </p>
 
-            <form className="max-w-lg mx-auto space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div className="relative group">
-                <input
-                  type="email"
-                  placeholder="tu@empresa.com"
-                  className={`w-full bg-transparent border-b-2 px-4 py-4 text-xl focus:outline-none transition-colors font-tech ${darkMode ? 'border-gray-600 text-white focus:border-[#3d1efe] placeholder-gray-600' : 'border-gray-300 text-gray-900 focus:border-[#3d1efe] placeholder-gray-400'}`}
-                />
-                <div className="absolute right-0 bottom-4 text-[#3d1efe] opacity-0 group-focus-within:opacity-100 transition-opacity">
-                  <ArrowRight />
-                </div>
+            {/* Lógica de Botones Sociales */}
+            <div className="flex flex-col items-center justify-center min-h-[120px]">
+
+              {/* Botón Principal (Solo Desktop, desaparece al click) */}
+              {!showSocials && (
+                <button
+                  onClick={() => setShowSocials(true)}
+                  className={`hidden md:block w-64 font-bold font-heading text-xl py-6 transition-all uppercase tracking-widest shadow-xl hover:scale-105 ${darkMode ? 'bg-white text-black hover:bg-[#3d1efe] hover:text-white' : 'bg-[#3d1efe] text-white hover:bg-[#2a15b0]'}`}
+                >
+                  Contáctanos
+                </button>
+              )}
+
+              {/* Contenedor de Redes */}
+              <div className={`flex flex-col md:flex-row gap-6 w-full md:w-auto items-center justify-center transition-all duration-500 ${!showSocials ? 'md:hidden opacity-100' : 'opacity-100 animate-in fade-in zoom-in duration-300'}`}>
+
+                {/* 1. INSTAGRAM */}
+                <a
+                  href="https://www.instagram.com/improvedigitals.pe/"
+                  target="_blank" rel="noopener noreferrer"
+                  className={`
+                    group flex items-center overflow-hidden transition-all duration-500 ease-out shadow-lg
+                    /* MÓVIL: Full width, con padding, alineado izquierda (o centro si prefieres) */
+                    w-full h-16 rounded-xl px-6 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 text-white justify-start md:justify-center
+                    /* DESKTOP (Inicial): Círculo pequeño, SIN padding, centrado absoluto, fondo transparente */
+                    md:w-16 md:h-16 md:rounded-full md:bg-none md:bg-transparent md:p-0
+                    md:border-2 md:border-pink-500 md:text-pink-500
+                    /* DESKTOP (Hover): Expande, añade padding, alinea izquierda, fondo gradiente */
+                    md:hover:w-64 md:hover:bg-gradient-to-tr md:hover:text-white md:hover:px-6 md:hover:justify-start
+                  `}
+                >
+                  <div className="min-w-[24px] flex justify-center"><Instagram size={28} /></div>
+                  <span className={`
+                    font-heading font-bold whitespace-nowrap text-lg transition-all duration-500
+                    /* MÓVIL: Visible y con margen */
+                    ml-4 opacity-100 max-w-xs
+                    /* DESKTOP (Inicial): Invisible, sin ancho, sin margen */
+                    md:ml-0 md:max-w-0 md:opacity-0 md:overflow-hidden
+                    /* DESKTOP (Hover): Visible, ancho máximo, margen */
+                    md:group-hover:ml-4 md:group-hover:max-w-[200px] md:group-hover:opacity-100
+                  `}>
+                    @improve-digitals
+                  </span>
+                </a>
+
+                {/* 2. TIKTOK (CORREGIDO) */}
+                <a
+                  href="https://www.tiktok.com/@improvedigitals.pe"
+                  target="_blank" rel="noopener noreferrer"
+                  className={`
+                    group flex items-center overflow-hidden transition-all duration-500 ease-out shadow-lg
+                    /* MÓVIL: Fondo negro, texto blanco */
+                    w-full h-16 rounded-xl px-6 bg-black text-white border border-gray-800 justify-start md:justify-center
+                    /* DESKTOP (Inicial): Fondo transparente, texto negro (light) o blanco (dark) */
+                    md:w-16 md:h-16 md:rounded-full md:bg-transparent md:p-0
+                    md:border-2 md:border-black md:text-black md:dark:border-white md:dark:text-white 
+                    /* DESKTOP (Hover): Invierte colores */
+                    md:hover:w-64 md:hover:bg-black md:hover:text-white md:hover:px-6 md:hover:justify-start md:dark:hover:bg-white md:dark:hover:text-black
+                  `}
+                >
+                  <div className="min-w-[24px] flex justify-center">
+                    {/* Se añadió 'text-current' para asegurar que fill="currentColor" funcione */}
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" className="text-current">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                  </div>
+                  <span className={`
+                    font-heading font-bold whitespace-nowrap text-lg transition-all duration-500
+                    ml-4 opacity-100 max-w-xs
+                    md:ml-0 md:max-w-0 md:opacity-0 md:overflow-hidden
+                    md:group-hover:ml-4 md:group-hover:max-w-[200px] md:group-hover:opacity-100
+                  `}>
+                    @improve-digitals
+                  </span>
+                </a>
+
+                {/* 3. LINKEDIN */}
+                <a
+                  href="https://www.linkedin.com/company/improve-digitals/posts/?feedView=all"
+                  target="_blank" rel="noopener noreferrer"
+                  className={`
+                    group flex items-center overflow-hidden transition-all duration-500 ease-out shadow-lg
+                    w-full h-16 rounded-xl px-6 bg-[#0077b5] text-white justify-start md:justify-center
+                    md:w-16 md:h-16 md:rounded-full md:bg-transparent md:p-0
+                    md:border-2 md:border-[#0077b5] md:text-[#0077b5]
+                    md:hover:w-64 md:hover:bg-[#0077b5] md:hover:text-white md:hover:px-6 md:hover:justify-start
+                  `}
+                >
+                  <div className="min-w-[24px] flex justify-center"><Linkedin size={28} /></div>
+                  <span className={`
+                    font-heading font-bold whitespace-nowrap text-lg transition-all duration-500
+                    ml-4 opacity-100 max-w-xs
+                    md:ml-0 md:max-w-0 md:opacity-0 md:overflow-hidden
+                    md:group-hover:ml-4 md:group-hover:max-w-[200px] md:group-hover:opacity-100
+                  `}>
+                    /improve-digitals
+                  </span>
+                </a>
+
               </div>
-              <button className={`w-full font-bold font-heading text-xl py-6 transition-colors mt-8 uppercase tracking-widest ${darkMode ? 'bg-white text-black hover:bg-[#3d1efe] hover:text-white' : 'bg-[#3d1efe] text-white hover:bg-[#2a15b0]'}`}>
-                Contáctanos
-              </button>
-            </form>
+            </div>
+
           </RevealOnScroll>
         </div>
       </section>
+
 
       <footer className={`py-8 border-t text-center font-tech text-xs uppercase tracking-widest ${darkMode ? 'bg-black border-white/10 text-gray-600' : 'bg-gray-50 border-gray-200 text-gray-500'}`}>
         &copy; {new Date().getFullYear()} Improve Digitals. All Rights Reserved.
