@@ -5,7 +5,7 @@ import {
   Bot,
   Sparkles,
   Rocket,
-  Zap,
+  Zap, // Asegúrate de que este esté
   ArrowRight,
   Brain,
   CheckCircle2,
@@ -16,7 +16,10 @@ import {
   Cpu,
   MousePointer2,
   Sun,
-  Moon
+  Moon,
+  Briefcase,  // NUEVO
+  TrendingUp, // NUEVO
+  Eye         // NUEVO
 } from 'lucide-react';
 
 
@@ -213,7 +216,7 @@ const App = () => {
       role: "Content Manager & Creator",
       image: "https://github.com/daniel7apata/improve-digitals/blob/main/src/assets/Franca%20Alatrista.png?raw=true",
       linkedin: "https://www.linkedin.com/in/franca-alatrista-466307249/",
-      quote: "Contenido que eleva tus vibras",
+      quote: "Contenido que eleva tus ventas",
       imageAlign: "object-top"
     },
     {
@@ -473,10 +476,11 @@ const App = () => {
               <div className={`absolute inset-0 bg-gradient-to-r from-[#3d1efe] to-blue-400 blur-2xl opacity-10 animate-[pulse_4s_infinite]`}></div>
               <div className="relative grid grid-cols-2 gap-4">
                 {[
-                  { icon: ShieldCheck, title: "Seriedad", desc: "Ética y profesionalismo como pilares" },
-                  { icon: Rocket, title: "Rentabilidad", desc: "Soluciones inteligentes a bajo precio" },
-                  { icon: Lightbulb, title: "Innovación", desc: "Exploramos lo nuevo, implementamos lo que funciona" },
-                  { icon: Scale, title: "Claridad", desc: "Aprende cómo en simples pasos" }
+                  // CAMBIOS DE ICONOS AQUÍ
+                  { icon: Briefcase, title: "Seriedad", desc: "Ética y profesionalismo como pilares" },
+                  { icon: TrendingUp, title: "Rentabilidad", desc: "Soluciones inteligentes a bajo precio" },
+                  { icon: Zap, title: "Innovación", desc: "Exploramos lo nuevo, implementamos lo que funciona" },
+                  { icon: Eye, title: "Claridad", desc: "Aprende cómo en simples pasos" }
                 ].map((item, idx) => (
                   <RevealOnScroll key={idx} className={`glass-panel p-6 transition-colors group rounded-xl ${darkMode ? 'hover:bg-white/5' : 'hover:bg-white hover:shadow-lg'}`}>
                     <item.icon size={40} className={`mb-4 transition-colors ${darkMode ? 'text-gray-400 group-hover:text-white' : 'text-gray-400 group-hover:text-[#3d1efe]'}`} />
@@ -490,6 +494,10 @@ const App = () => {
         </div>
       </section>
 
+      // ... (resto de importaciones)
+
+// Busca la sección con id="soluciones" y reemplaza su contenido interior con esto:
+
       {/* VERTICALS - "Alarako" but Blue */}
       <section id="soluciones" className="py-32 relative overflow-hidden">
         {/* Background Abstract */}
@@ -502,44 +510,89 @@ const App = () => {
             </h2>
           </RevealOnScroll>
 
+          {/* Grid cambiado para soportar 4 tarjetas (2x2 en desktop) */}
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
-            {/* Vertical 1 */}
+            
+            {/* Dashboard #1: Arquitectura Digital Inteligente */}
             <RevealOnScroll className="group relative">
               <div className={`absolute inset-0 bg-gradient-to-br from-[#3d1efe] to-[#050510] transform skew-y-2 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
               <div className={`relative border p-10 rounded-3xl h-full hover:-translate-y-4 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10 shadow-black/50' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
                 <div className="w-20 h-20 bg-[#3d1efe] rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-500/30 transform rotate-3 group-hover:rotate-0 transition-transform">
-                  <Sparkles size={40} className="text-white animate-pulse" />
+                  <Cpu size={40} className="text-white" />
                 </div>
-                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Content AI</h3>
+                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Arquitectura Digital Inteligente</h3>
                 <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Generación de contenido con inteligencia artificial. Utilizamos los últimos modelos de imágenes y videos para que tu organización venda más siguiendo las tendencias.
+                  Diseñamos la estructura que integra procesos, herramientas y datos en un sistema coherente y escalable.
                 </p>
                 <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3" /> Copywriting Viral</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3" /> Avatares & Influencers</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3" /> ⁠Arte Generativo</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Diseño de flujos inteligentes</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Integración de herramientas IA</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Integración multimodal</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Desarrollo web y ecosistemas</li>
                 </ul>
               </div>
             </RevealOnScroll>
 
-            {/* Vertical 2 */}
+            {/* Dashboard #2: Crecimiento digital */}
             <RevealOnScroll className="group relative mt-12 md:mt-0">
               <div className={`absolute inset-0 bg-gradient-to-br from-[#00c6ff] to-[#050510] transform -skew-y-2 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
               <div className={`relative border p-10 rounded-3xl h-full hover:-translate-y-4 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10 shadow-black/50' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
                 <div className="w-20 h-20 bg-[#00c6ff] rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-500/30 transform -rotate-3 group-hover:rotate-0 transition-transform">
-                  <Cpu size={40} className="text-white" />
+                  <Rocket size={40} className="text-white" />
                 </div>
-                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Automatización & Apps</h3>
+                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Crecimiento Digital</h3>
                 <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Optimiza tu tiempo. Desarrollamos automatizaciones y programas que agilizan procesos y resuelven problemas cotidianos. 
+                  Construimos mecanismos digitales que impulsan el posicionamiento de tu marca.
                 </p>
                 <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3" /> Chatbots de Atención</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3" /> Workflows Automatizados</li>
-                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3" /> ⁠Apps Personalizadas</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Estrategia y contenido con IA</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Producción audiovisual con IA</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Avatares e influencers virtuales</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> CRM, SEO y analítica</li>
                 </ul>
               </div>
             </RevealOnScroll>
+
+            {/* Dashboard #3: Inteligencia Operativa */}
+            <RevealOnScroll className="group relative">
+              <div className={`absolute inset-0 bg-gradient-to-br from-[#3d1efe] to-[#050510] transform skew-y-2 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
+              <div className={`relative border p-10 rounded-3xl h-full hover:-translate-y-4 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10 shadow-black/50' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
+                <div className="w-20 h-20 bg-[#3d1efe] rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-500/30 transform rotate-3 group-hover:rotate-0 transition-transform">
+                  <Brain size={40} className="text-white" />
+                </div>
+                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Inteligencia Operativa</h3>
+                <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  Convertimos datos y procesos en decisiones estratégicas disruptivas.
+                </p>
+                <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Sistemas analíticos por sector</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Modelos predictivos y algoritmos</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Medición de eficiencia operativa</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#3d1efe] mr-3 min-w-[20px]" /> Diseño y monitoreo de KPIs</li>
+                </ul>
+              </div>
+            </RevealOnScroll>
+
+            {/* Dashboard #4: Seguridad Digital */}
+            <RevealOnScroll className="group relative mt-12 md:mt-0">
+              <div className={`absolute inset-0 bg-gradient-to-br from-[#00c6ff] to-[#050510] transform -skew-y-2 group-hover:skew-y-0 transition-transform duration-500 rounded-3xl ${darkMode ? 'opacity-100' : 'opacity-10'}`}></div>
+              <div className={`relative border p-10 rounded-3xl h-full hover:-translate-y-4 transition-transform duration-300 shadow-2xl ${darkMode ? 'bg-[#0a0a1a] border-white/10 shadow-black/50' : 'bg-white border-gray-100 shadow-blue-900/10'}`}>
+                <div className="w-20 h-20 bg-[#00c6ff] rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-500/30 transform -rotate-3 group-hover:rotate-0 transition-transform">
+                  <ShieldCheck size={40} className="text-white" />
+                </div>
+                <h3 className={`font-heading text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Seguridad Digital</h3>
+                <p className={`font-tech mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  Diseñamos entornos digitales seguros, resilientes y alineados a estándares de protección.
+                </p>
+                <ul className={`space-y-4 font-tech text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Evaluación de riesgos digitales</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Protección de datos estratégicos</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Sistemas de respaldo</li>
+                  <li className="flex items-center"><CheckCircle2 className="text-[#00c6ff] mr-3 min-w-[20px]" /> Seguridad en automatizaciones IA</li>
+                </ul>
+              </div>
+            </RevealOnScroll>
+
           </div>
         </div>
       </section>
@@ -555,7 +608,7 @@ const App = () => {
           <RevealOnScroll>
             <div className="text-center mb-20">
               <h2 className={`font-heading text-5xl md:text-7xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Mentes Maestras</h2>
-              <p className="font-tech text-xl text-[#3d1efe]">Ingeniería + Arte + Estrategia</p>
+              <p className="font-tech text-xl text-[#3d1efe]">Ingeniería + Producto + Estrategia</p>
             </div>
           </RevealOnScroll>
 
@@ -578,19 +631,19 @@ const App = () => {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/2">
               <RevealOnScroll>
-                <h3 className="text-[#3d1efe] font-tech font-bold uppercase tracking-widest mb-4">Nuestra Esencia</h3>
+                <h3 className="text-[#3d1efe] font-tech font-bold uppercase tracking-widest mb-4">¿Qué hacemos?</h3>
                 <h2 className={`font-heading text-4xl md:text-5xl font-bold leading-tight mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                  El Arquetipo del <br /><span className={`${darkMode ? 'text-white' : 'text-[#3d1efe]'} italic text-6xl`}>Sabio</span>.
+                  Integramos la IA <br /><span className={`${darkMode ? 'text-white' : 'text-[#3d1efe]'} italic text-6xl`}>con estrategia</span>.
                 </h2>
               </RevealOnScroll>
             </div>
             <div className="md:w-1/2 border-l-4 border-[#3d1efe] pl-8">
               <RevealOnScroll>
                 <p className={`font-heading text-2xl leading-relaxed italic mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                  "No buscamos ser magos. La magia es engañosa. Buscamos ser sabios: la sabiduría es eterna, verificable y estratégica."
+                  "La ventaja competitiva no está en usar IA. Está en saber dónde, cómo y por qué integrarla."
                 </p>
                 <p className={`font-tech ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>
-                  Empoderamos a través del conocimiento, no de la dependencia tecnológica.
+                  La innovación no es velocidad. Es dirección guiando una estrategia.
                 </p>
               </RevealOnScroll>
             </div>
@@ -610,7 +663,7 @@ const App = () => {
               HABLEMOS 
             </h2>
             <p className={`font-tech text-xl mb-12 max-w-2xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              Mejora tus procesos, escala tus productos, aumenta tus ventas. Con nosotros, mejora.
+              Integra procesos, automatización, crecimiento y seguridad en un solo sistema estratégico.
             </p>
 
             <form className="max-w-lg mx-auto space-y-4" onSubmit={(e) => e.preventDefault()}>
