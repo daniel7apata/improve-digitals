@@ -712,38 +712,47 @@ const App = () => {
                     /* DESKTOP (Hover): Visible, ancho máximo, margen */
                     md:group-hover:ml-4 md:group-hover:max-w-[200px] md:group-hover:opacity-100
                   `}>
-                    @improve-digitals
+                    improvedigitals.pe
                   </span>
                 </a>
 
-                {/* 2. TIKTOK (CORREGIDO) */}
+                {/* 2. TIKTOK CORREGIDO */}
                 <a
-                  href="https://www.tiktok.com/@improvedigitals.pe"
+                  href="https://tiktok.com/@improvedigitals.pe"
                   target="_blank" rel="noopener noreferrer"
                   className={`
-                    group flex items-center overflow-hidden transition-all duration-500 ease-out shadow-lg
-                    /* MÓVIL: Fondo negro, texto blanco */
-                    w-full h-16 rounded-xl px-6 bg-black text-white border border-gray-800 justify-start md:justify-center
-                    /* DESKTOP (Inicial): Fondo transparente, texto negro (light) o blanco (dark) */
-                    md:w-16 md:h-16 md:rounded-full md:bg-transparent md:p-0
-                    md:border-2 md:border-black md:text-black md:dark:border-white md:dark:text-white 
-                    /* DESKTOP (Hover): Invierte colores */
-                    md:hover:w-64 md:hover:bg-black md:hover:text-white md:hover:px-6 md:hover:justify-start md:dark:hover:bg-white md:dark:hover:text-black
-                  `}
+                  group flex items-center overflow-hidden transition-all duration-500 ease-out shadow-lg
+                  /* MÓVIL (Base): Siempre fondo negro y texto blanco */
+                  w-full h-16 rounded-xl px-6 bg-black text-white border border-gray-800 justify-start md:justify-center
+                  
+                  /* DESKTOP (Reposo): Borde y Texto Negro en Modo Claro | Borde y Texto Blanco en Modo Oscuro */
+                  md:w-16 md:h-16 md:rounded-full md:bg-transparent md:p-0
+                  md:border-2 
+                  ${darkMode ? 'md:border-white md:text-white' : 'md:border-black md:text-black'}
+                  
+                  /* DESKTOP (Hover): Inversión de colores para feedback visual */
+                  md:hover:w-64 md:hover:px-6 md:hover:justify-start 
+                  ${darkMode ? 'md:hover:bg-white md:hover:text-black' : 'md:hover:bg-black md:hover:text-white'}
+                `}
                 >
                   <div className="min-w-[24px] flex justify-center">
-                    {/* Se añadió 'text-current' para asegurar que fill="currentColor" funcione */}
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" className="text-current">
-                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      width="28"
+                      height="28"
+                    >
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                     </svg>
                   </div>
                   <span className={`
                     font-heading font-bold whitespace-nowrap text-lg transition-all duration-500
                     ml-4 opacity-100 max-w-xs
+                    /* Desktop: Oculto por defecto, aparece en hover */
                     md:ml-0 md:max-w-0 md:opacity-0 md:overflow-hidden
                     md:group-hover:ml-4 md:group-hover:max-w-[200px] md:group-hover:opacity-100
                   `}>
-                    @improve-digitals
+                    improvedigitals.pe
                   </span>
                 </a>
 
@@ -766,7 +775,7 @@ const App = () => {
                     md:ml-0 md:max-w-0 md:opacity-0 md:overflow-hidden
                     md:group-hover:ml-4 md:group-hover:max-w-[200px] md:group-hover:opacity-100
                   `}>
-                    /improve-digitals
+                    improve-digitals
                   </span>
                 </a>
 
