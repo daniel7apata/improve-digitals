@@ -405,7 +405,7 @@ const App = () => {
           <RevealOnScroll>
             <div className={`inline-flex items-center px-6 py-2 rounded-full glass-panel mb-8 border border-[#3d1efe]/30 font-heading font-bold uppercase tracking-widest text-xs animate-[pulse_3s_infinite] ${darkMode ? 'text-white' : 'text-[#3d1efe]'
               }`}>
-              <Zap size={14} className="mr-2" /> Agencia de IA & Automatización
+              <Zap size={14} className="mr-2" /> Agencia de Inteligencia Artificial
             </div>
 
             <h1 className={`font-heading text-5xl md:text-7xl lg:text-9xl font-black leading-[0.9] tracking-tighter mb-8 ${darkMode ? 'mix-blend-lighten text-white' : 'text-gray-900'}`}>
@@ -416,8 +416,8 @@ const App = () => {
             </h1>
 
             <p className={`font-heading text-lg md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed font-light ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              No somos otra agencia más. Somos tus mentores estratégicos en la era del caos digital.
-              <span className={`block mt-4 font-medium italic text-3xl ${darkMode ? 'text-white' : 'text-[#3d1efe]'}`}>"Convertimos incertidumbre en ingresos."</span>
+              Rediseñamos tu arquitectura digital para optimizar los procesos de tu empresa con herramientas de IA, al mismo tiempo que te ayudamos a tener una mayor presencia en redes sociales y agilizar la creación de tu contenido. 
+              <span className={`block mt-4 font-medium italic text-3xl ${darkMode ? 'text-white' : 'text-[#3d1efe]'}`}>"IA aplicada. Resultados reales"</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -426,7 +426,7 @@ const App = () => {
                 className="group relative px-8 py-5 rounded-lg bg-[#3d1efe] text-white font-bold font-heading text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-2xl shadow-blue-500/20"
               >
                 <span className="relative flex items-center">
-                  Explorar Soluciones
+                  Servicios
                 </span>
               </button>
 
@@ -434,7 +434,7 @@ const App = () => {
                 onClick={() => scrollToSection('equipo')}
                 className={`px-8 py-5 rounded-lg border-2 font-heading font-bold text-lg transition-all ${darkMode ? 'border-white/30 hover:border-white text-white hover:bg-white/10' : 'border-gray-200 hover:border-[#3d1efe] text-gray-700 hover:text-[#3d1efe]'}`}
               >
-                Conoce a los Expertos
+                Proyectos
               </button>
             </div>
           </RevealOnScroll>
@@ -453,18 +453,17 @@ const App = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <RevealOnScroll>
               <h2 className={`font-heading text-5xl md:text-6xl font-bold leading-none mb-8 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                El mundo está <br />
-                <span className={`line-through decoration-[#3d1efe] decoration-4 ${darkMode ? 'text-gray-600' : 'text-gray-400'}`}>saturado</span>. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3d1efe] to-[#00c6ff]">Buscas Verdad.</span>
+                La mayoría usa IA <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3d1efe] to-[#00c6ff]">Pocos la integran bien.</span>
               </h2>
               <div className={`space-y-8 font-tech text-lg ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                 <p>
-                  Hay demasiados proveedores vendiendo "humo" tecnológico. Tú no quieres solo "IA", quieres
-                  <span className="text-[#3d1efe] font-bold"> certeza</span>.
+                  El problema no es adoptar herramientas. Es saber cómo
+                  <span className="text-[#3d1efe] font-bold"> aprovecharlas al máximo. </span>.
                 </p>
                 <div className="pl-6 border-l-4 border-[#3d1efe]">
                   <p className={`italic text-2xl font-heading font-medium ${darkMode ? 'text-white' : 'text-gray-800'}`}>
-                    "Actuamos como el Sabio. Traducimos la complejidad en decisiones éticas y rentables."
+                    "Diseñamos infraestructura inteligente que genera resultados"
                   </p>
                 </div>
               </div>
@@ -475,9 +474,9 @@ const App = () => {
               <div className="relative grid grid-cols-2 gap-4">
                 {[
                   { icon: ShieldCheck, title: "Seriedad", desc: "Ética y profesionalismo como pilares" },
-                  { icon: Rocket, title: "Velocidad", desc: "Automatización que escala y aumenta tus ventas" },
-                  { icon: Lightbulb, title: "Innovación", desc: "Tecnología que resuelve" },
-                  { icon: Scale, title: "Claridad", desc: "Aprende en simples pasos" }
+                  { icon: Rocket, title: "Rentabilidad", desc: "Soluciones inteligentes a bajo precio" },
+                  { icon: Lightbulb, title: "Innovación", desc: "Exploramos lo nuevo, implementamos lo que funciona" },
+                  { icon: Scale, title: "Claridad", desc: "Aprende cómo en simples pasos" }
                 ].map((item, idx) => (
                   <RevealOnScroll key={idx} className={`glass-panel p-6 transition-colors group rounded-xl ${darkMode ? 'hover:bg-white/5' : 'hover:bg-white hover:shadow-lg'}`}>
                     <item.icon size={40} className={`mb-4 transition-colors ${darkMode ? 'text-gray-400 group-hover:text-white' : 'text-gray-400 group-hover:text-[#3d1efe]'}`} />
