@@ -497,10 +497,6 @@ const App = () => {
         </div>
       </section>
 
-      // ... (resto de importaciones)
-
-      // Busca la sección con id="soluciones" y reemplaza su contenido interior con esto:
-
       {/* VERTICALS - "Alarako" but Blue */}
       {/* SECCIÓN SOLUCIONES ACTUALIZADA */}
       <section id="soluciones" className="py-32 relative overflow-hidden">
