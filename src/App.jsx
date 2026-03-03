@@ -337,7 +337,7 @@ const App = () => {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8 items-center font-heading font-medium">
-              {['Soluciones', 'Filosofía', 'Equipo'].map((item) => (
+              {['Proyectos','Nosotros'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase().replace('í', 'i'))}
@@ -361,7 +361,7 @@ const App = () => {
                 className="px-6 py-2.5 rounded-full font-bold transition-all shadow-lg hover:-translate-y-0.5 text-white"
                 style={{ backgroundColor: primaryColor }}
               >
-                Hablemos
+                Contáctanos
               </button>
             </div>
 
@@ -384,7 +384,7 @@ const App = () => {
         {isMenuOpen && (
           <div className={`md:hidden border-b absolute w-full font-heading ${darkMode ? 'bg-[#050510] border-white/10' : 'bg-white border-gray-100'}`}>
             <div className="px-4 py-6 space-y-4">
-              {['Soluciones', 'Filosofía', 'Equipo'].map((item) => (
+              {['Proyectos','Nosotros'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -429,7 +429,7 @@ const App = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <button
-                onClick={() => scrollToSection('soluciones')}
+                onClick={() => scrollToSection('servicios')}
                 className="group relative px-8 py-5 rounded-lg bg-[#3d1efe] text-white font-bold font-heading text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-2xl shadow-blue-500/20"
               >
                 <span className="relative flex items-center">
@@ -438,7 +438,7 @@ const App = () => {
               </button>
 
               <button
-                onClick={() => scrollToSection('equipo')}
+                onClick={() => scrollToSection('proyectos')}
                 className={`px-8 py-5 rounded-lg border-2 font-heading font-bold text-lg transition-all ${darkMode ? 'border-white/30 hover:border-white text-white hover:bg-white/10' : 'border-gray-200 hover:border-[#3d1efe] text-gray-700 hover:text-[#3d1efe]'}`}
               >
                 Proyectos
@@ -499,7 +499,7 @@ const App = () => {
 
       {/* VERTICALS - "Alarako" but Blue */}
       {/* SECCIÓN SOLUCIONES ACTUALIZADA */}
-      <section id="soluciones" className="py-32 relative overflow-hidden">
+      <section id="servicios" className="py-32 relative overflow-hidden">
         {/* Background Abstract */}
         <div className={`absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-[#3d1efe]/5 to-transparent rounded-full blur-3xl pointer-events-none`}></div>
 
@@ -598,7 +598,7 @@ const App = () => {
       </section>
 
       {/* TEAM - Creative/Alarako Display */}
-      <section id="equipo" className={`py-32 relative ${darkMode ? 'bg-[#050510]' : 'bg-white'}`}>
+      <section id="nosotros" className={`py-32 relative ${darkMode ? 'bg-[#050510]' : 'bg-white'}`}>
         {/* Decorative Typography Background */}
         <div className={`absolute top-20 left-0 w-full overflow-hidden opacity-5 leading-none select-none pointer-events-none ${darkMode ? 'text-white' : 'text-[#3d1efe]'}`}>
           <span className="text-[20vw] font-black font-heading whitespace-nowrap">THE SQUAD </span>
@@ -661,7 +661,7 @@ const App = () => {
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <RevealOnScroll>
             <h2 className={`font-heading text-6xl md:text-8xl font-black mb-8 tracking-tighter ${darkMode ? 'text-white mix-blend-overlay' : 'text-[#3d1efe]'}`}>
-              HABLEMOS
+              Contáctanos
             </h2>
             <p className={`font-tech text-xl mb-12 max-w-2xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               Mejora tus procesos, escala tus productos, aumenta tus ventas. Con nosotros, mejora.
