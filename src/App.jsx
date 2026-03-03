@@ -528,7 +528,7 @@ const App = () => {
                   <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Diseño de flujos inteligentes</li>
                   <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Integración de herramientas IA</li>
                   <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Integración multimodal</li>
-                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Desarrollo web y ecosistemas</li>
+                  <li className="flex items-start"><CheckCircle2 size={16} className="text-[#3d1efe] mr-2 mt-1 min-w-[16px]" /> Desarrollo web e investigación de mercado</li>
                 </ul>
               </div>
             </RevealOnScroll>
